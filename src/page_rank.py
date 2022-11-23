@@ -9,6 +9,7 @@ class MRPageRank(MRJob):
 
     def configure_args(self):
         super(MRPageRank, self).configure_args()
+        
         self.add_passthru_arg(
             '--damping-factor', dest='damping_factor', default=0.85, type=float,
             help='The value of damping factor. Defaults to 0.85.')
